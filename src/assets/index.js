@@ -22,6 +22,7 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import sql from "./tech/sql.png";
 import java from "./tech/java.png";
+import spring from "./tech/spring-boot-96.png";
 
 import deepak from "./deepak.jpg";
 import golu from "./golu.jpg";
@@ -30,6 +31,7 @@ import jp from "./jp.jpeg";
 import celebal from "./company/celebal.png";
 import internshala from "./company/internshala.png";
 
+import product from "./product.png";
 import pglife from "./pglife.png";
 import admindashboard from "./admindashboard.png";
 import weather from "./weather.png";
@@ -42,6 +44,7 @@ export {
   design,
   mobile,
   web,
+  spring,
   github,
   menu,
   close,
@@ -62,6 +65,7 @@ export {
   java,
   celebal,
   internshala,
+  product,
   pglife,
   admindashboard,
   weather,

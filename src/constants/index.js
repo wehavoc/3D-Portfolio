@@ -3,6 +3,7 @@ import {
   frontend,
   design,
   web,
+  spring,
   javascript,
   typescript,
   html,
@@ -19,6 +20,7 @@ import {
   java,
   celebal,
   internshala,
+  product,
   pglife,
   admindashboard,
   weather,
@@ -47,16 +49,16 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Front-End Developer",
     icon: web,
   },
   {
-    title: "React Developer",
-    icon: mobile,
+    title: "Back-End Developer",
+    icon: frontend,
   },
   {
-    title: "Front-End Developer",
-    icon: frontend,
+    title: "Problem Solving",
+    icon: mobile,
   },
   {
     title: "Design",
@@ -77,21 +79,25 @@ const technologies = [
     name: "JavaScript",
     icon: javascript,
   },
-  // {
-  //   name: "TypeScript",
-  //   icon: typescript,
-  // },
+  {
+    name: "TypeScript",
+    icon: typescript,
+  },
   {
     name: "React JS",
     icon: reactjs,
   },
-  // {
-  //   name: "Redux Toolkit",
-  //   icon: redux,
-  // },
+  {
+    name: "Redux Toolkit",
+    icon: redux,
+  },
   {
     name: "Tailwind CSS",
     icon: tailwind,
+  },
+  {
+    name: "Spring Boot",
+    icon: spring,
   },
   // {
   //   name: "Node JS",
@@ -182,6 +188,39 @@ const testimonials = [
 ];
 
 const projects = [
+    {
+    name: "Product Management",
+    description:
+      "Developed a secure CRUD backend application using Java, JDBC, and Servlets with DAO layers for user and product management, including a custom authentication system with hashed passwords. Focused on secure database operations and clean, maintainable architecture.",
+    tags: [
+      {
+        name: "Java",
+        color: "green-text-gradient",
+      },
+      {
+        name: "HTML",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "JSP",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MySQL",
+        color: "green-text-gradient",
+      },
+    ],
+    image: product,
+    source_code_link: "https://github.com/wehavoc/JDBCServeletMaven",
+  },
   {
     name: "PG Life",
     description:
@@ -260,50 +299,7 @@ const projects = [
     ],
     image: weather,
     source_code_link: "https://github.com/Havoc-Ujjwal/Weather-App",
-  },
-  {
-    name: "Plan With Ujjwal",
-    description: "I developed a fully responsive website where users can explore tour details, including price, distance, budget, and mark tours as interested or not.",
-    tags: [
-      {
-        name: "ReactJS",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "HTML",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Tailwind CSS",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: pwu,
-    source_code_link: "https://github.com/Havoc-Ujjwal/PlanWithUjjwal",
-  },
-  {
-    name: "To-Do App",
-    description:
-      "Created a To-Do App using React.js to help users manage daily tasks. The app features a clean interface, focusing on task organization and productivity.",
-    tags: [
-      {
-        name: "React.js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Storage API",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: todo,
-    source_code_link: "https://github.com/Havoc-Ujjwal/ToDoApp",
-  },
-
-
+  }
 ];
 
 export { services, technologies, experiences, testimonials, projects };

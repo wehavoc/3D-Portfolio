@@ -44,12 +44,9 @@ const About = () => {
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        className='mt-4 text-secondary text-[17px]  leading-[30px]'
       >
-        I'm a skilled Front-End developer with experience in JavaScrip
-        and expertise in frameworks like React and Three.js. I'm a quick learner
-        and collaborate closely with clients to create efficient, scalable,
-        and user-friendly solutions. Let's work together to bring your ideas to life!
+        I am a skilled developer with experience in Java, JavaScript, and TypeScript, and hands-on expertise in React, HTML, CSS, SQL, REST APIs, Hibernate, and JPA. I am proficient with Git and GitHub and have experience working with JDBC and JSP. I bring strong problem-solving, adaptability, time management, and communication skills, enabling me to collaborate effectively and deliver reliable, scalable solutions.
       </motion.p>
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (

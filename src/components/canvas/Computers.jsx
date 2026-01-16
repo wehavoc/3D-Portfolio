@@ -21,7 +21,7 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
+        scale={isMobile ? 0.63 : 0.675}
         position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
@@ -76,3 +76,96 @@ const ComputersCanvas = () => {
 };
 
 export default ComputersCanvas;
+
+// import React, { Suspense, useEffect, useState } from "react";
+// import { Canvas } from "@react-three/fiber";
+// import { OrbitControls, Preload, useGLTF, ContactShadows } from "@react-three/drei";
+
+// import CanvasLoader from "../Loader";
+
+// const Computers = ({ isMobile }) => {
+//   const computer = useGLTF("./desktop_pc/scene.gltf");
+
+//   return (
+//     <mesh>
+//       {/* Ambient light for soft overall illumination */}
+//       <ambientLight intensity={0.3} />
+
+//       {/* Hemisphere light for sky/ground bounce */}
+//       <hemisphereLight intensity={0.5} groundColor="gray" />
+
+//       {/* SpotLight for directional shadows */}
+//       <spotLight
+//         position={[-20, 50, 10]}
+//         angle={0.12}
+//         penumbra={0.6}       // softer edges
+//         intensity={0.6}      // reduced intensity to make shadows lighter
+//         castShadow
+//         shadow-mapSize={2048}
+//         shadow-bias={-0.0001}
+//       />
+
+//       {/* Optional point light for fill */}
+//       <pointLight intensity={0.5} />
+
+//       {/* The 3D model */}
+//       <primitive
+//         object={computer.scene}
+//         scale={isMobile ? 0.63 : 0.675}          // 10% smaller
+//         position={isMobile ? [0, -2.8, -2.2] : [0, -2.93, -1.5]} // adjusted for scale
+//         rotation={[-0.01, -0.2, -0.1]}
+//       />
+
+//       {/* Soft shadow beneath the computer */}
+//       <ContactShadows
+//         position={[0, -3, 0]}
+//         opacity={0.3}   // lighter shadow
+//         scale={10}      // shadow area
+//         blur={2}        // soft blur
+//         far={10}        // how far it renders
+//       />
+//     </mesh>
+//   );
+// };
+
+// const ComputersCanvas = () => {
+//   const [isMobile, setIsMobile] = useState(false);
+
+//   useEffect(() => {
+//     const mediaQuery = window.matchMedia("(max-width: 500px)");
+//     setIsMobile(mediaQuery.matches);
+
+//     const handleMediaQueryChange = (event) => {
+//       setIsMobile(event.matches);
+//     };
+
+//     mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+//     return () => {
+//       mediaQuery.removeEventListener("change", handleMediaQueryChange);
+//     };
+//   }, []);
+
+//   return (
+//     <Canvas
+//       frameloop="demand"
+//       shadows
+//       dpr={[1, 2]}
+//       camera={{ position: [20, 3, 5], fov: 25 }}
+//       gl={{ preserveDrawingBuffer: true }}
+//     >
+//       <Suspense fallback={<CanvasLoader />}>
+//         <OrbitControls
+//           enableZoom={false}
+//           maxPolarAngle={Math.PI / 2}
+//           minPolarAngle={Math.PI / 2}
+//         />
+//         <Computers isMobile={isMobile} />
+//       </Suspense>
+
+//       <Preload all />
+//     </Canvas>
+//   );
+// };
+
+// export default ComputersCanvas;
